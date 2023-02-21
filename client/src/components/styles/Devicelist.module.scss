@@ -1,0 +1,20 @@
+@import '../../styles/Variables.scss';
+
+.devicelist_w {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    row-gap: 50px;
+}
+
+.not_found {
+    font-weight: 500;
+    color: $dark;
+    font-size: 18px;
+}
+
+@media only screen and (min-width:1800px) {
+    .devicelist_w {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

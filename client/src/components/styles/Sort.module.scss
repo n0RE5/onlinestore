@@ -1,0 +1,55 @@
+@import '../../styles/Variables.scss';
+
+.sorts {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.sort_title {
+    color: $dark;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sort_hr {
+    margin: 15px 0;
+    width: 35px;
+    border-top: 3px solid rgb(232, 232, 232);
+}
+
+input.sort_slider {
+    width: 100%;
+    margin: 15px 0;
+    &[type='range'] {
+        appearance: none;
+        background: transparent;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $light_gray;
+        cursor: pointer;
+    }
+    &::-webkit-slider-thumb {
+        appearance: none;
+        height: 14px;
+        width: 14px;
+        border-radius: 50px;
+        background-color: $blue;
+    }
+}
+
+.sort_slider_value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    span {
+        display: flex;
+        align-items: center;
+    }
+    input {
+        margin-right: 3px;
+        width: 50px;
+    }
+}

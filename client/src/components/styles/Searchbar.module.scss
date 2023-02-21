@@ -1,0 +1,71 @@
+@import '../../styles/Variables.scss';
+
+.searchbar_w {
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    height: 55px;
+    background-color: $blue;
+    box-shadow: 0px 2px 5px 2px $light_gray;
+}
+
+.searchbar_title {
+    color: white;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.searchbar_ul {
+    a {
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: 300;
+        color: rgb(247, 247, 247);
+    }
+}
+
+.searchbar_categories {
+    display: flex;
+}
+
+.searchbar_form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.searchbar_input {
+    background-color: $blue;
+    width: 200px;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    &::placeholder {
+        padding: auto;
+        font-size: 16px;
+        color: white;
+    }
+    &:active, &:focus {
+        color: white;
+        outline: none;
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+.searchbar_search {
+    border: none;
+    width: 25px;
+    height: 25px;
+    background: url('../../assets/svg/search.svg') no-repeat center;
+    background-size: contain;
+    margin-left: -30px;
+    filter: brightness(0) invert(1);
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/Variables.scss';
+
+.inputbox {
+    width: max-content;
+    padding: 10px 200px 10px 0;
+    input {
+        appearance: none;
+    }
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(95, 95, 95);
+        cursor: pointer;
+        &:hover {
+            transition: all 0.2s ease-in-out;
+            color: $light_gray;
+        }
+    }
+    input[type="radio"]:checked+label {
+        appearance: none;
+        transition: all 0.2s ease-in;
+        color: $blue;
+    }
+}

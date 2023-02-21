@@ -1,0 +1,36 @@
+@import './Variables.scss';
+.e_404 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    div, a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.e_404_title {
+    display: flex;
+    font-weight: 700;
+    font-size: 72px;
+}
+
+.e_404_pagenotfound {
+    font-weight: 300;
+    color: $dark;
+    font-size: 32px;
+}
+
+.e_404_description {
+    margin: 15px 0;
+    color: rgb(138, 138, 138);
+    font-size: 16px;
+}
+
+.e_404_link {
+    text-decoration: none;
+    color: $blue;
+    font-weight: 500;
+}

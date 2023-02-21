@@ -1,0 +1,147 @@
+@import './Variables.scss';
+
+.admin {
+    margin-top: 50px;
+    height: 800px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.admin_w {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin_hr {
+    margin: 15px 0;
+    width: 35px;
+    border-top: 3px solid rgb(232, 232, 232);
+}
+
+.admin_title {
+    font-size: 26px;
+    color: $dark;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.admin_sidebar {
+    padding: 10px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px $light_gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_switch {
+    text-decoration: none;
+    border: 1px solid $light_gray;
+    transition: all 0.3s ease-in;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $dark;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    &:hover {
+        background-color: $blue;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.admin_body {
+    width: calc(100% - 320px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px $light_gray;
+}
+
+.admin_console {
+    margin: 10px 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(254, 255, 196);
+    color: $dark;
+}
+
+.admin_main_w {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_main_title {
+    font-size: 36px;
+    color: $dark;
+    font-weight: 700;
+}
+
+.admin_main_panel {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    gap: 16px;
+}
+
+.admin_main_hr {
+    margin: 15px 0;
+    width: 100%;
+    border-top: 3px solid rgb(232, 232, 232);
+}
+
+.admin_main_panel_box {
+    transition: all 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 3px $light_gray;
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    text-decoration: none;
+    color: $dark;
+    font-weight: 500;
+    &:hover {
+        color: white;
+        background-color: $blue;
+    }
+}
+
+.admin_inputbox {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.admin_label {
+    font-size: 18px;
+    font-weight: 700;
+    color: $dark;
+    width: 300px;
+}
+
+.admin_input {
+    height: 40px;
+    width: 100%;
+}
+
+.admin_button {
+    margin: 10px 0;
+    width: max-content;
+    transition: all 0.2s ease-in;
+    border: none;
+    padding: 20px 60px;
+    font-size: 20px;
+    color: white;
+    font-style: 700px;
+    background-color: $blue;
+    &:hover {
+        outline: 4px solid rgba(81,143,246, 0.5);
+        cursor: pointer;
+        background-color: rgb(11, 103, 173);
+    }
+}

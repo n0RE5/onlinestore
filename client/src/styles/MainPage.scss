@@ -1,0 +1,14 @@
+@import './Variables.scss';
+
+.mainpage {
+    margin-top: 20px;
+    &__searchbar {
+        margin: 50px 0;
+    }
+    &__content {
+        display: flex;
+        >:nth-child(1) {
+            margin-right: 30px;
+        }
+    }
+}

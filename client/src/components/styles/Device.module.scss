@@ -1,0 +1,84 @@
+@import '../../styles/Variables.scss';
+
+.device {
+    transition: all 0.3s ease-in;
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px $light_gray;
+    padding: 15px;
+    &:hover {
+        background-color: rgb(247, 247, 247);
+        cursor: pointer;
+    }
+}
+
+.device_img {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 150px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.device_title {
+    color: #444;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.device_tag {
+    color: white;
+    width: max-content;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: 700;
+    padding: 4px 8px;
+    background-color: $light_red;
+    box-shadow: 0px 2px 3px 1px $light_gray;
+    margin-bottom: 10px;
+}
+
+.device_hr {
+    margin: 15px 0;
+    border-top: 1px solid rgb(225, 225, 225);
+}
+
+.device_price {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.basket {
+    width: 16px;
+    height: 16px;
+    margin-left: 20px;
+    filter: brightness(0.9) invert(50%);
+    background: url('../../assets/svg/shopping-cart.png') no-repeat center;
+    background-size: contain;
+}
+
+.rate {
+    display: flex;
+}
+
+.star_active {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background: url('../../assets/svg/star.svg') no-repeat center;
+    filter: hue-rotate(180deg);
+}
+
+.star {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background: url('../../assets/svg/star.svg') no-repeat center;
+    filter: brightness(100%) saturate(0%) contrast(150%);
+}

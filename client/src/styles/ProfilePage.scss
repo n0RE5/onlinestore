@@ -1,0 +1,128 @@
+@import './Variables.scss';
+
+.profile {
+    margin-top: 50px;
+    height: 800px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.profile_w {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_circle {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border: 9px solid rgb(77, 77, 77);
+    border-radius: 50%;
+    &:before {
+        display: flex;
+        content: "";
+        width: 220px;
+        height: 220px;
+        background: url('../assets/svg/profile.svg') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.profile_hr {
+    margin: 15px 0;
+    width: 35px;
+    border-top: 3px solid rgb(232, 232, 232);
+}
+
+.profile_title {
+    font-size: 26px;
+    color: $dark;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.profile_email {
+    color: $blue;
+    margin-top: 10px;
+}
+
+.profile_sidebar {
+    padding: 10px;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px $light_gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_switch {
+    text-decoration: none;
+    border: 1px solid $light_gray;
+    transition: all 0.3s ease-in;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $dark;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    &:hover {
+        background-color: $blue;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.profile_body {
+    width: calc(100% - 320px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px $light_gray;
+}
+
+.main_w {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_title {
+    font-size: 36px;
+    color: $dark;
+    font-weight: 700;
+}
+
+.main_panel {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    gap: 16px;
+}
+
+.main_hr {
+    margin: 15px 0;
+    width: 100%;
+    border-top: 3px solid rgb(232, 232, 232);
+}
+
+.main_panel_box {
+    transition: all 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 3px $light_gray;
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    text-decoration: none;
+    color: $dark;
+    font-weight: 500;
+    &:hover {
+        color: white;
+        background-color: $blue;
+    }
+}

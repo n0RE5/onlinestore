@@ -1,0 +1,81 @@
+@import './Variables.scss';
+
+.loginpage {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginpage_w {
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px $light_gray;
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 550px;
+    padding: 20px 40px;
+    flex-direction: column;
+}
+
+.loginpage_title {
+    margin-top: 20px;
+    margin-bottom: 120px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+
+.loginpage_form {
+    color: $dark;
+    font-weight: 500;
+    margin: 10px 0;
+    align-self: flex-start;
+}
+
+.loginpage_button {
+    margin-top: 50px;
+    transition: all 0.2s ease-in;
+    background-color: $blue;
+    padding: 15px 45px;
+    color: white;
+    font-size: 24px;
+    border: none;
+    &:hover {
+        background-color: rgb(38, 101, 201);;
+    }
+    &:focus {
+        outline: 3px solid rgba(81, 144, 246, 0.468);
+    }
+}
+
+.loginpage_input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid $light_gray;
+    &:focus {
+        outline: 3px solid rgba(81, 144, 246, 0.468);
+    }
+    height: 50px;
+}
+
+.loginpage_switch {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(119, 119, 119);
+    span {
+        text-align: center;
+    }
+    a {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: $blue;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
