@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { useSearchQuery } from '../components/hooks/useSearchQuery';
+import { useSearchQuery } from '../hooks/useSearchQuery';
 import { create } from '../http/deviceAPI';
 import { IUser } from '../types/Interfaces';
 import '../styles/AdminPage.scss'

@@ -5,7 +5,7 @@ import '../styles/DevicePage.scss'
 import { useSelector } from 'react-redux';
 import Searchbar from '../components/Searchbar';
 import { getDevice } from '../http/deviceAPI';
-import { useFetching } from '../components/hooks/useFetching';
+import { useFetching } from '../hooks/useFetching';
 import { fillBasket } from '../http/basketAPI';
 import { deviceLoading } from '../utils/placeholder';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { IDevice } from '../types/Interfaces';
-import { useSearchQuery } from './hooks/useSearchQuery';
+import { useSearchQuery } from '../hooks/useSearchQuery';
 import classes from './styles/Sort.module.scss'
 import Radio from './UI/Radio/Radio';
 
