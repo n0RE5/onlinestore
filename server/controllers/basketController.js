@@ -37,6 +37,18 @@ class BasketController {
 
         return res.json(basket)
     }
+
+    async remove(req, res, next) {
+            const {basketId, deviceId} = req.body
+
+            if(isNaN(basketId) || isNaN(deviceId)) {
+                return next(ApiError.badRequest("ID Is not a number"))
+            }
+
+            const response = await BasketDevice.destroy({where: {basketId, deviceId}})
+
+            return res.json(response)
+    }
 }
 
 module.exports = new BasketController()
