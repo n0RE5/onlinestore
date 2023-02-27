@@ -33,16 +33,18 @@ function App() {
   }, []);
 
   return (
+    <div className="wrapper">
       <BrowserRouter>
         <Navbar />
         {isLoading
           ? <div />
-          : <div className="contain">
+          : <div className="contain content">
                 <AppRouter />
             </div>  
         }
         <Footer />
       </BrowserRouter>
+    </div>
   );
 }
 
