@@ -7,23 +7,14 @@ import Searchbar from '../components/Searchbar';
 import { getDevice } from '../http/deviceAPI';
 import { useFetching } from '../components/hooks/useFetching';
 import { fillBasket } from '../http/basketAPI';
+import { deviceLoading } from '../utils/placeholder';
 
 function DevicePage() {
 
     const navigate = useNavigate()
     const isAuth: boolean = useSelector((state: any) => state.userState.isAuth)
     const user: IUser = useSelector((state: any) => state.userState.user)
-    const [device, setDevice] = useState<IDevice>({
-        id: 1,
-        name: "Loading...", 
-        price: 10, 
-        brand: "",
-        img: "",
-        rating: 10,
-        tag: "", 
-        type: "",
-        info: []
-    })
+    const [device, setDevice] = useState<IDevice>(deviceLoading)
 
     const {id} = useParams()
 
