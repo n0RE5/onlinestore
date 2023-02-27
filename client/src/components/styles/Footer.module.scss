@@ -1,0 +1,34 @@
+@import '../../styles/Variables.scss';
+
+.footer_top {
+    width: 100%;
+    background-color: #353535;
+    display: flex;
+    padding: 80px 70px;
+}
+
+.footer_btm {
+    padding: 20px 70px;
+    background-color: #222222;
+    color: #666;
+}
+
+.footer_module {
+    margin-right: 100px;
+    .footer_module_name {
+        color: whitesmoke;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .footer_module_list {
+        list-style-type: none;
+        li { 
+            margin-top: 20px;
+            a {
+                color: #666;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+    }
+}
