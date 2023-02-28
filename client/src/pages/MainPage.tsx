@@ -4,11 +4,11 @@ import Devicelist from '../components/Devicelist';
 import Searchbar from '../components/Searchbar';
 import Sort from '../components/Sort';
 import '../styles/MainPage.scss'
-import { IDevice } from '../types/Interfaces';
+import { IDevice, IRootReducer } from '../types/Interfaces';
 
 function MainPage() {
     
-    const deviceList: IDevice[] = useSelector((state: any) => state.globalList.deviceList)
+    const deviceList = useSelector<IRootReducer, IDevice[]>(state => state.globalList.deviceList)
     const [sortedList, setSortedList] = useState<IDevice[]>([...deviceList])
 
     return (

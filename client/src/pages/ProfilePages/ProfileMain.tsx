@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { IUser } from '../../types/Interfaces';
+import { IRootReducer, IUser } from '../../types/Interfaces';
 
 const ProfileMain: React.FC = () => {
     
-    const user: IUser = useSelector((state: any) => state.userState.user)
+    const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
 
     return (
         <div className="main_w">

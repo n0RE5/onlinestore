@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSearchQuery } from '../hooks/useSearchQuery';
 import { setAuth, setUser } from '../store/userSlice';
 import '../styles/ProfilePage.scss'
-import { IUser } from '../types/Interfaces';
+import { IRootReducer, IUser } from '../types/Interfaces';
 import ProfileBasket from './ProfilePages/ProfileBasket';
 import ProfileMain from './ProfilePages/ProfileMain';
 import ProfileSettings from './ProfilePages/ProfileSettings';
@@ -15,7 +15,7 @@ function ProfilePage() {
     const dispatch = useDispatch()
     const [params] = useSearchQuery()
     const page = params.get("page") || ""
-    const user: IUser = useSelector((state: any) => state.userState.user)
+    const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
     const [renderedComponent, setRenderedComponent] = useState<React.ReactNode | JSX.Element>(<div/>)
     
     const renderComponent = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { admin_routes, auth_routes, public_routes } from '../routes';
+import { IRootReducer } from '../types/Interfaces';
 
 interface AppRouterProps {
     
@@ -9,7 +10,7 @@ interface AppRouterProps {
 
 const AppRouter: React.FC<AppRouterProps> = () => {
 
-    const userState = useSelector((state: any) => state.userState)
+    const userState = useSelector<IRootReducer, IRootReducer["userState"]>(state => state.userState)
 
     return (
         <Routes>

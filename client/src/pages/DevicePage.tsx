@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { IDevice, IUser } from '../types/Interfaces';
+import { IDevice, IRootReducer, IUser } from '../types/Interfaces';
 import '../styles/DevicePage.scss'
 import { useSelector } from 'react-redux';
 import Searchbar from '../components/Searchbar';
@@ -12,8 +12,8 @@ import { deviceLoading } from '../utils/placeholder';
 function DevicePage() {
 
     const navigate = useNavigate()
-    const isAuth: boolean = useSelector((state: any) => state.userState.isAuth)
-    const user: IUser = useSelector((state: any) => state.userState.user)
+    const isAuth = useSelector<IRootReducer, boolean>(state => state.userState.isAuth)
+    const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
     const [device, setDevice] = useState<IDevice>(deviceLoading)
 
     const {id} = useParams()

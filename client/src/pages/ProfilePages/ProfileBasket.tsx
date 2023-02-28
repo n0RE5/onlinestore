@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getBasket, removeBasketItem } from '../../http/basketAPI';
-import { IDevice, IUser } from '../../types/Interfaces';
+import { IDevice, IRootReducer, IUser } from '../../types/Interfaces';
 import { deviceLoading } from '../../utils/placeholder';
 
 const ProfileBasket: React.FC = () => {
 
-    const user: IUser = useSelector((state: any) => state.userState.user)
+    const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
     const [device, setDevice] = useState<IDevice>(deviceLoading)
 
     const getUserBasket = async () => {

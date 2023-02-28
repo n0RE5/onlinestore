@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { IDevice } from '../types/Interfaces';
+import { IDevice, IRootReducer } from '../types/Interfaces';
 import classes from './styles/Searchbar.module.scss'
 
 const Searchbar: React.FC = () => {
 
-    const globalList: IDevice[] = useSelector((state: any) => state.globalList.deviceList)
+    const globalList = useSelector<IRootReducer, IDevice[]>((state: any) => state.globalList.deviceList)
     const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState<string>("")
 

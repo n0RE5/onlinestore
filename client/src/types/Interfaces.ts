@@ -1,3 +1,13 @@
+export interface IRootReducer {
+    userState: {
+        user: IUser,
+        isAuth: boolean
+    },
+    globalList: {
+        deviceList: IDevice[]
+    }
+}
+
 export interface IUser {
     id: number,
     email: string,

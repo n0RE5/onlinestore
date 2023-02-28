@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { IRootReducer } from '../types/Interfaces';
 import classes from './styles/Navbar.module.scss'
 
 const Navbar: React.FC = () => {
 
-    const isAuth = useSelector((state: any) => state.userState.isAuth);
+    const isAuth = useSelector<IRootReducer, boolean>(state => state.userState.isAuth)
 
     return (
         <div className={classes.navbar}>

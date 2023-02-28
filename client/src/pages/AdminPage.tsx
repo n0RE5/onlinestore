@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSearchQuery } from '../hooks/useSearchQuery';
 import { create } from '../http/deviceAPI';
-import { IUser } from '../types/Interfaces';
+import { IRootReducer, IUser } from '../types/Interfaces';
 import '../styles/AdminPage.scss'
 import AdminMain from './AdminPages/AdminMain';
 import AdminBrandTypeManager from './AdminPages/AdminBrandTypeManager';
@@ -14,7 +14,7 @@ function AdminPage() {
     const navigate = useNavigate()
     const [params] = useSearchQuery()
     const page = params.get("page") || ""
-    const user: IUser = useSelector((state: any) => state.userState.user)
+    const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
     const [renderedComponent, setRenderedComponent] = useState<React.ReactNode | JSX.Element>(<div/>)
     
     const renderComponent = () => {
