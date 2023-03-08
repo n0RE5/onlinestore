@@ -11,14 +11,12 @@ interface SortProps {
 }
 
 const Sort: React.FC<SortProps> = ({list, setSortedList}) => {
-
-    const [search, setParams, setSearch] = useSearchQuery()
+    const [search, setParams] = useSearchQuery()
     const orderBy = search.get('orderBy') || 'default'
     const category = search.get('category') || 'all'
     const price = search.get('price') || '0'
 
     const price_decorator = (list: IDevice[]) => {
-
         if(Number(price) === 0) {
             return list
         }
@@ -27,30 +25,31 @@ const Sort: React.FC<SortProps> = ({list, setSortedList}) => {
     }
 
     const filter_decorator = (list: IDevice[]) => {
-        
         if(category === "all") {
-            return setSortedList([...price_decorator(list)])
+            return list
         }
 
-        const categoryFiltered = [...price_decorator(list)].filter(item => item.type === category)
-
-        return setSortedList(categoryFiltered) 
+        return [...list].filter(item => item.type === category)
     }
 
-    const sort = () => {
+    const order_decorator = (list: IDevice[]) => {
         if (orderBy === "priceLtH") {
-            return filter_decorator([...list].sort((a, b) => a.price - b.price))
+            return [...list].sort((a, b) => a.price - b.price)
         }
 
         if(orderBy === "priceHtL") {
-            return filter_decorator([...list].sort((a, b) => b.price - a.price))
+            return [...list].sort((a, b) => b.price - a.price)
         }
 
         if(orderBy === "avgRating") {
-            return filter_decorator([...list].sort((a, b) => b.rating - a.rating))
+            return [...list].sort((a, b) => b.rating - a.rating)
         }
 
-        return filter_decorator([...list])
+        return [...list]
+    }
+
+    const sort = () => {
+        setSortedList(order_decorator(filter_decorator(price_decorator(list))))
     }
 
     useEffect(() => {
