@@ -3,7 +3,6 @@ import { createBrand, getAllBrands, getBrand } from '../../http/brandAPI';
 import { createType, getAllTypes, getType } from '../../http/typeAPI';
 
 const AdminBrandTypeManager: React.FC = () => {
-
     const [name, setName] = useState<string>('')
     const [mode, setMode] = useState<boolean>(true)
     const [id, setId] = useState<string>('')

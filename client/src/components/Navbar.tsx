@@ -5,7 +5,6 @@ import { IRootReducer } from '../types/Interfaces';
 import classes from './styles/Navbar.module.scss'
 
 const Navbar: React.FC = () => {
-
     const isAuth = useSelector<IRootReducer, boolean>(state => state.userState.isAuth)
 
     return (
