@@ -2,11 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/ErrorPage.scss"
 
-interface ErrorPageProps {
-    
-}
-
-const ErrorPage: React.FC<ErrorPageProps> = () => {
+const ErrorPage: React.FC = () => {
     return (
         <div className='e_404'>
             <div className='e_404_title'>404</div>

@@ -12,7 +12,6 @@ import { setAuth, setUser } from './store/userSlice';
 import './styles/App.scss'
 
 function App() {
-
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const deviceList = useSelector((state: any) => state.globalList.deviceList)
   const dispatch = useDispatch();

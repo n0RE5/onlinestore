@@ -10,7 +10,6 @@ import { fillBasket } from '../http/basketAPI';
 import { deviceLoading } from '../utils/placeholder';
 
 function DevicePage() {
-
     const navigate = useNavigate()
     const isAuth = useSelector<IRootReducer, boolean>(state => state.userState.isAuth)
     const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
@@ -35,8 +34,7 @@ function DevicePage() {
             }
 
             const response = await fillBasket(user.basketId, Number(id))
-            console.log(response);
-            
+            alert("Added to your basket!")
         } catch (error: any) {
             alert(error.response?.data?.message);
             

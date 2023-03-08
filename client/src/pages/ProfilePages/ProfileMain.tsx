@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { IRootReducer, IUser } from '../../types/Interfaces';
 
 const ProfileMain: React.FC = () => {
-    
     const user = useSelector<IRootReducer, IUser>(state => state.userState.user)
 
     return (
@@ -12,7 +11,7 @@ const ProfileMain: React.FC = () => {
             <div className="main_title">Your Profile</div>
             <hr className="main_hr"/>
             <div className="main_panel">
-                <Link to={`/profile/?page=main`} className="main_panel_box">Profile</Link>
+                <Link to={`/profile/?page=settings`} className="main_panel_box">Profile</Link>
                 <Link to={`/profile/?page=basket`} className="main_panel_box">Basket</Link>
                 {user.role === "ADMIN" && <Link to={`/admin`} className="main_panel_box">Admin Panel</Link>}
             </div>

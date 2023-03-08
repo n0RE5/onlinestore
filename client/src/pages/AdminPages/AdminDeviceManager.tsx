@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { create } from '../../http/deviceAPI';
 
 const AdminDeviceManager: React.FC = () => {
-
     const [price, setPrice] = useState<string>("")
     const [name, setName] = useState<string>("")
     const [brandId, setBrand] = useState<string>("")

@@ -10,7 +10,6 @@ import ProfileMain from './ProfilePages/ProfileMain';
 import ProfileSettings from './ProfilePages/ProfileSettings';
 
 function ProfilePage() {
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const [params] = useSearchQuery()

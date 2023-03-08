@@ -5,8 +5,7 @@ import { IDevice, IRootReducer } from '../types/Interfaces';
 import classes from './styles/Searchbar.module.scss'
 
 const Searchbar: React.FC = () => {
-
-    const globalList = useSelector<IRootReducer, IDevice[]>((state: any) => state.globalList.deviceList)
+    const globalList = useSelector<IRootReducer, IDevice[]>(state => state.globalList.deviceList)
     const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState<string>("")
 
