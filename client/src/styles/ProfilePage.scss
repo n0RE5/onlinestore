@@ -126,3 +126,90 @@
         background-color: $blue;
     }
 }
+
+.basket_table {
+    width: 100%;
+    thead {
+        width: 100%;
+        background-color: whitesmoke;
+    }
+    th, td {
+        text-align: start;
+        color: #444;
+        font-weight: 500px;
+        font-size: 14px;
+        padding: 8px;
+    }
+    td {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .basket_item {
+        color: $blue;
+    }
+    .basket_price {
+        text-decoration: underline;
+        color: $light_red;
+    }
+    .basket_img {
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .basket_rm {
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        span {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            content: "";
+            width: 25px;
+            height: 25px;
+            background: url('../assets/svg/close.svg') no-repeat center;
+            background-size: contain;
+        }
+        width: 100px;
+    }
+    .basket_empty {
+        font-weight: 700;
+        margin-top: 10px;
+    }
+}
+
+.basket_buy {
+    transition: all .25s ease-out;
+    border: none;
+    background-color: $blue;
+    color: white;
+    border-radius: 3px;
+    font-size: 24px;
+    padding: 15px 40px;
+    float: right;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(33, 98, 202);
+    }
+}
+
+.profile_settings {
+    display: flex;
+    margin: 15px 0;
+    .profile_left {
+        font-size: 20px;
+        color: $dark;
+        font-weight: 500;
+        width: 50%;
+    }
+    .profile_right {
+        text-decoration: underline;
+        font-size: 20px;
+        color: $light_red;
+        font-weight: 500;
+        width: 50%;
+    }
+}
